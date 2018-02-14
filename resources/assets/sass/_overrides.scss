@@ -1,0 +1,39 @@
+.is-muted {
+  color: $grey-light !important;
+}
+a.is-muted:hover{
+  color: $grey !important;
+}
+
+.has-dropdown  {
+  position: relative;
+  background-color: transparent !important;
+  border: none;
+
+  .navbar-dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    background-color: white;
+    min-width: 100px;
+    text-align: left;
+    box-shadow: 0 0 1px rgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
+  }
+
+  &.is-aligned-right .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+
+    &.is-open .dropdown-menu {
+      display: block;
+    }
+}
+a.navbar-link:hover {
+  background-color: white !important;
+}
+.navbar{
+  height: 4.5rem;
+}

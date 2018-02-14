@@ -5,14 +5,22 @@
 // Variables
 @import "variables";
 // font-awesome
-@import "~font-awesome/scss/font-awesome";
+@import "node_modules/font-awesome/scss/font-awesome";
 // Bulma
-@import '~bulma/bulma';
+@import "node_modules/bulma/bulma.sass";
 
 // Bulma Vue modules
-@import '~buefy/src/scss/buefy';
+@import "node_modules/buefy/src/scss/buefy.scss";
 
+//custom scss pages
+@import "overrides";
+@import "helpers";
+@import "manage";
+@import "styles";
 .navbar-laravel {
-  background-color: #fff;
+  background-color: $body-background;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+html {
+  background-color: $body-background;
 }

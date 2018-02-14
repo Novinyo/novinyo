@@ -1048,6 +1048,32 @@ window.Vue = __webpack_require__(35);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 //Vue.component('example-component', require('./components/ExampleComponent.vue'));
+var app = new Vue({
+  el: '#app',
+  data: {}
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Get the navbar-burger element
+  var $burger = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // check if there's any navbar burger
+  if ($burger.length > 0) {
+    // Add a click event to each burger found
+
+    $burger.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
 
 /***/ }),
 /* 12 */
