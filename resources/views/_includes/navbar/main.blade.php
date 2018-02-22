@@ -1,5 +1,4 @@
 <nav class="navbar has-shadow">
-  <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{route('home')}}">
         <img src="{{asset('images/logo.png')}}" alt="novinyo" width="112" height="28">
@@ -33,9 +32,9 @@
         </a>
         @else
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="/documentation/overview/start/">
-            {{ Auth::user()->name }}
-          </a>
+          <span class="navbar-link">
+            <i class="fa fa-user-circle-o"></i>&nbsp; {{ Auth::user()->name }}
+          </span>
           <div class="navbar-dropdown is-boxed">
             <a class="navbar-item" href="#">
               Profile
@@ -43,7 +42,7 @@
             <a class="navbar-item" href="#">
               Notifications
             </a>
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="{{route('manage.dashboard')}}">
               Settings
             </a>
             <hr class="navbar-divider">
@@ -59,5 +58,4 @@
         </div>
         @endguest
       </div>
-  </div>
 </nav>

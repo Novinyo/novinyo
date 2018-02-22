@@ -18,9 +18,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::prefix('manage')->group(function() {
+Route::prefix('manage')->middleware('role:superadministrator|administrator|User|Author')->group(function() {
   Route::get('/', 'ManageController@index');
   Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+  Route::resource('/users', 'UserController');
+  Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
+  Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
