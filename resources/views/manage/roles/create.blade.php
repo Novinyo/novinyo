@@ -62,7 +62,7 @@
                                         </b-checkbox>
                                     </div>
                                 @endforeach
-                                </div>
+                            </div>
                             </div>
                         </div>
                     </article>
