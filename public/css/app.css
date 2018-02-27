@@ -17290,38 +17290,6 @@ a.is-muted:hover {
   color: #7a7a7a !important;
 }
 
-.has-dropdown {
-  position: relative;
-  background-color: transparent !important;
-  border: none;
-}
-
-.has-dropdown .navbar-dropdown {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  z-index: 1000;
-  background-color: white;
-  min-width: 100px;
-  text-align: left;
-  -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-          box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-}
-
-.has-dropdown.is-aligned-right .dropdown-menu {
-  right: 0;
-  left: auto;
-}
-
-.has-dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
-a.navbar-link:hover {
-  background-color: white !important;
-}
-
 .navbar {
   height: 4.5rem;
 }
@@ -17727,6 +17695,18 @@ a.navbar-link:hover {
 
 .flex-container {
   margin: 10px 25px;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-list li ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .navbar-laravel {

@@ -22,7 +22,7 @@
           Share
         </a>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end nav-menu" style="overflow:visible">
         @guest
         <a class="navbar-item is-tab" href="{{route('login')}}">
           Login
@@ -33,22 +33,26 @@
         @else
         <div class="navbar-item has-dropdown is-hoverable">
           <span class="navbar-link">
-            <i class="fa fa-user-circle-o"></i>&nbsp; {{ Auth::user()->name }}
+            Hi&nbsp;{{ Auth::user()->name }}
           </span>
           <div class="navbar-dropdown is-boxed">
             <a class="navbar-item" href="#">
+              <i class="fa fa-fw fa-user-circle-o m-r-5"></i>&nbsp;
               Profile
             </a>
             <a class="navbar-item" href="#">
+                <i class="fa fa-fw fa-bell m-r-5"></i>&nbsp;
               Notifications
             </a>
             <a class="navbar-item" href="{{route('manage.dashboard')}}">
+                <i class="fa fa-fw fa-sliders m-r-5"></i>&nbsp;
               Settings
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
+                          <i class="fa fa-fw fa-sign-out m-r-5"></i>&nbsp;
               Logout
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
